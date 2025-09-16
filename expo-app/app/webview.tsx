@@ -12,8 +12,8 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { WebView } from 'react-native-webview';
 import { Stack, useRouter } from 'expo-router';
 import { useState } from 'react';
-import { Linking } from 'react-native';
 
+const OnekeyURL = process.env.EXPO_PUBLIC_ONEKEY_URL || 'https://80e4637ea217.ngrok-free.app'
 export default function WebViewScreen() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
@@ -26,7 +26,7 @@ export default function WebViewScreen() {
   // Use ngrok URL for all platforms except web
   const webViewUrl = Platform.OS === 'web'
     ? 'http://localhost:3000'
-    : 'https://ac61f0e9568c.ngrok-free.app/';
+    : `${OnekeyURL}`;
 
   if (Platform.OS === 'web') {
     return (
