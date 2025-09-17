@@ -1,2 +1,7 @@
 node_modules
 app-monorepo-5.12.1.zip
+*.apks
+*.apk
+*.aab
+*.jar
+*.pb

@@ -1,4 +1,18 @@
 {
   "compilerOptions": {},
-  "extends": "expo/tsconfig.base"
+  "extends": "expo/tsconfig.base",
+  "exclude": [
+    "**/dist",
+    "**/build",
+    "**/.next",
+    "**/.nuxt",
+    "**/node_modules",
+    "bundle.*.js",
+    "*.bundle.js",
+    "*.min.js",
+    "*.min.css",
+    "*.map",
+    "*.js.map",
+    "*.d.ts.map",
+  ]
 }

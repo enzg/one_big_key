@@ -13,7 +13,7 @@ import { WebView } from 'react-native-webview';
 import { Stack, useRouter } from 'expo-router';
 import { useState } from 'react';
 
-const OnekeyURL = process.env.EXPO_PUBLIC_ONEKEY_URL || 'https://80e4637ea217.ngrok-free.app'
+const OnekeyURL = process.env.EXPO_PUBLIC_ONEKEY_URL || 'https://app.onekeytest.com/'
 export default function WebViewScreen() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);

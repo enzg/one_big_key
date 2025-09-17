@@ -44,6 +44,13 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
+      },
+      "package": "com.xmenzg.expoapp"
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3a06abcb-6dea-40ed-968e-64106ec2d54d"
       }
     }
   }
