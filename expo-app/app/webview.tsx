@@ -25,7 +25,7 @@ export default function WebViewScreen() {
 
   // Use ngrok URL for all platforms except web
   const webViewUrl = Platform.OS === 'web'
-    ? 'http://localhost:3000'
+    ? `${OnekeyURL}`
     : `${OnekeyURL}`;
 
   if (Platform.OS === 'web') {
