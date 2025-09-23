@@ -13,20 +13,18 @@ import { WebView } from 'react-native-webview';
 import { Stack, useRouter } from 'expo-router';
 import { useState } from 'react';
 
-const OnekeyURL = process.env.EXPO_PUBLIC_ONEKEY_URL || 'https://app.onekeytest.com/'
+const OnekeyURL = process.env.EXPO_PUBLIC_ONEKEY_URL || 'https://app.onekeytest.com/';
 export default function WebViewScreen() {
   const router = useRouter();
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const {height} = useWindowDimensions();
+  const { height } = useWindowDimensions();
   const insets = useSafeAreaInsets();
 
   const modalHeight = height - insets.top;
 
   // Use ngrok URL for all platforms except web
-  const webViewUrl = Platform.OS === 'web'
-    ? `${OnekeyURL}`
-    : `${OnekeyURL}`;
+  const webViewUrl = Platform.OS === 'web' ? `${OnekeyURL}` : `${OnekeyURL}`;
 
   if (Platform.OS === 'web') {
     return (
@@ -109,7 +107,6 @@ export default function WebViewScreen() {
           <WebView
             source={{ uri: webViewUrl }}
             style={[styles.webview, { minHeight: modalHeight }]}
-            
             onLoadStart={() => {
               console.log('🚀 Device WebView - Starting to load:', webViewUrl);
             }}

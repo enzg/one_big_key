@@ -1,4 +1,12 @@
-import { Platform, SafeAreaView, View, Text, TouchableOpacity, StyleSheet, StatusBar } from 'react-native';
+import {
+  Platform,
+  SafeAreaView,
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  StatusBar,
+} from 'react-native';
 import { useRouter } from 'expo-router';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -8,14 +16,23 @@ export default function Settings() {
 
   const settingsItems = [
     {
-      title: 'OneKey',
-      subtitle: '',
-      onPress: () => router.push('/webview'),
+      title: '🔗 Custom WalletConnect',
+      subtitle: 'Basic implementation (gets stuck)',
+      onPress: () => router.push('/wallet'),
+    },
+    {
+      title: '🚀 AppKit Integration',
+      subtitle: 'Production-ready robust solution',
+      onPress: () => router.push('/wallet-appkit'),
     },
   ];
 
   return (
-    <View style={[styles.container, { paddingTop: Platform.OS === 'android' ? insets.top + 20 : insets.top }]}>
+    <View
+      style={[
+        styles.container,
+        { paddingTop: Platform.OS === 'android' ? insets.top + 20 : insets.top },
+      ]}>
       <StatusBar barStyle="dark-content" />
       <View style={styles.content}>
         <Text style={styles.header}>Settings</Text>
